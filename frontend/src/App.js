@@ -24,6 +24,7 @@ function App() {
       return data.json();
     })
     .then((dataJS) => {
+      // console.log(dataJS)
       setInfo(dataJS);
     });
   };
@@ -45,9 +46,6 @@ function App() {
 
     <Button variant="outline-primary" onClick={fetch}>Fetch</Button>{' '}
     {info}
-    {/* <button type="button" class="btn-success" onClick={fetch}>
-          Fetch info:
-    </button> */}
     </>
   );
 }
