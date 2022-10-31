@@ -4,6 +4,15 @@
 
 # <div align="center">A platform for reviewing your favorite movies and shows</div>
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+    - [Setup](#setup)
+    - [How to set up knexfile](#how-to-set-up-knexfile)
+- [Explanation of application (with images)](#explanation-of-application-with-images)
+- [Contributors](#contributors)
+
 # Introduction  
 [saga](https://saga-hpnk.onrender.com/) is an application designed to give users one location to find popular movies and tv shows and leave their own reviews. Our application uses data from TMDB to provide details about past and upcoming movies and shows. We hope you enjoy using saga.  
 <br>
@@ -23,7 +32,7 @@
 * Install [postgresql](https://www.postgresql.org/)
 * Get api key from [TMDB](https://www.themoviedb.org/documentation/api)
 
-### Setup
+# Setup
 Begin by running the following command in the root folder to install depencies  
 ```js
 npm install
@@ -51,7 +60,7 @@ Finally, to start the react app run the following command in ```./frontend```
 ```js
 npm start
 ```  
-# How to set up knexfile.js  
+# How to set up knexfile  
 ```knexfile.js``` can be find at the following path from the root folder: ```./backend/db```  
 
 You will need to set up a ```.local.env``` file in the root folder which contains the following variables:  
@@ -62,9 +71,56 @@ DB_NAME=<your_db_name>
 DB_PASSWORD=<your_db_password>
 NODE_ENV=development
 ```  
-You will also want to add your ```.local.env``` to the ```.gitignore``` file in the root folder to avoid your sensitive data from being pushed to github 😱
+You will also want to add your ```.local.env``` to the ```.gitignore``` file in the root folder to avoid your sensitive data from being pushed to github 😱  
+# Explanation of application (with images)
 
-# Contributors 🛠
+### Homepage
+Users are initially shown a carousel of the top 5 movies currently. Users can scroll through the movies to view posters, ratings, descriptions, and can click a button to see more details, reviews, and leave a review.
+<img alt="homepage" width="100%" src="./images/homepage.png"/>
+<hr>
+
+### Popular movies
+Below the carousel on the homepage, users can view other popular movies. Clicking on a movie poster or title will open a popup window to read and share reviews.
+<img alt="popular movies" width="100%" src="./images/popular_movies.png"/>
+<hr>
+
+### Popular TV shows
+Below the popular movies on the homepage, popular tv shows are also listed. As with the movies, clicking on the posters or titles are an easy way for users to read more details about the movie, reviews, and write their own reviews.
+<img alt="tv shows" width="100%" src="./images/popular_shows.png"/>
+<hr>
+
+### Movie/Show details popup
+Upon clicking a poster, title, or details button, this popup window is dislayed with information about the selected content. 
+<img alt="details popup" width="100%" src="./images/info_card.png"/>
+<hr>
+
+### Reviews
+Users are able to write their own reviews of the movies and submit this to be rendered in our reviews list. Saga uses TMDB to generate reviews, and user reviews are added to our saga database to be viewed by other users.
+<img alt="reviews" width="100%" src="./images/reviews.png"/>
+<hr>
+
+### Filter by genre
+Under the movies or tv shows tabs, users can filter results based on genres. Selecting a genre will fill the page with the content filtered by their choice.
+<img alt="filter by genre" width="100%" src="./images/genre_filter.png"/>
+<hr>
+
+### Filter by rating
+You can also filter by rating to receive movies and shows that only rank higher than the selected rating. Both of these filters are compounded, so you can select a genre, rating, and a sorting filter under the other tab. To clear these filter results, users can click on the reset filters button.
+<img alt="filter by rating" width="100%" src="./images/rating_filter.png"/>
+<hr>
+
+### Upcoming movies
+Under the upcoming movies tab, users can view movies that have not been released yet. Users are able to click on the images or titles to view current information, as well as easily view the current release date for that movie.
+<img alt="upcoming movies" width="100%" src="./images/upcoming_movies.png"/>
+<hr>
+
+### Safe Mode
+Saga provides users a way to moderate the content they are viewing. With the safe mode switch set to off, we do not filter any of the content going to the page. However, if a user wishes to view movies that are considered more age approprite (G, PG, PG-13, using the American movie rating system), they can simply toggle this switch on and click to a new tab and it will only show content within the appropriate rating range.<br>
+<img alt="safe mode off" width="30%" src="./images/safe_mode_off.png"/>
+<img alt="safe mode on" width="34%" src="./images/safe_mode_on.png"/>
+<hr>
+
+# Contributors
 Feel free to check out our github pages and see what other projects we have worked on! 😎
 <table>
   <tr>
