@@ -34,30 +34,30 @@
 
 # Setup
 Begin by running the following command in the root folder to install depencies  
-```js
+```
 npm install
 ```  
 Next, create a postgresql database  
-```js
+```
 psql
 CREATE DATABASE <db_name>
 ```  
 After your database is created and running, run the following commands to create database and add seed data  
-```js
+```
 npm run migrate:latest
 npm run seed:data
 ```  
 To start the server, run the following command  
-```js
+```
 npm start
 ```  
 Next run the following commands to change directory to ```./frontend``` and install npm dependencies for react  
-```js
+```
 cd frontend
 npm install
 ```  
 Finally, to start the react app run the following command in ```./frontend```  
-```js
+```
 npm start
 ```  
 # How to set up knexfile  
