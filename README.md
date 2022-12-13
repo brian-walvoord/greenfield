@@ -33,7 +33,7 @@
 * Get api key from [TMDB](https://www.themoviedb.org/documentation/api)
 
 # Setup
-Begin by running the following command in the root folder to install depencies  
+Begin by running the following command in the root folder to install dependencies  
 ```
 npm install
 ```  
